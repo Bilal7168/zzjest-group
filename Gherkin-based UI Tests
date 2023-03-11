@@ -20,6 +20,7 @@ Non-numeric	        Display an error message
 Blank	              Display an error message
 
 User story # 2 : Test Case: Access audio recitation of a chapter
+#### User story # 2 : Test Case: Access audio recitation of a chapter
 Equivalence classes: Valid chapter numbers (e.g. 2), invalid chapter numbers (e.g. 120), non-numeric input (e.g. "Bismillah"), blank input.
 Boundary values: Minimum and maximum chapter numbers (e.g. 1, 114), empty search field.
 Decision table:
@@ -30,6 +31,7 @@ Non-numeric	        Display an error message
 Blank	              Display an error message
 
 User story # 3 : Test Case: Access multiple audio recitations of a chapter
+#### User story # 3 : Test Case: Access multiple audio recitations of a chapter
 
 Equivalence classes: Valid chapter numbers (e.g. 2), invalid chapter numbers (e.g. 120), non-numeric input (e.g. "Bismillah"), blank input.
 Boundary values: Minimum and maximum chapter numbers (e.g. 1, 114), empty search field.
@@ -39,8 +41,74 @@ Valid	              Display a list of available audio recitations for the select
 Invalid	            Display an error message
 
 
+#### User Story 4: Search for a specific verse in the Quran 
+
+##### Equivalence class:
+Valid input: Surah and verse number (e.g. Surah Al-Baqarah, verse 255)
+Invalid input: Non-existing Surah or verse number
+
+##### Boundary values:
+Surah number: 1 and 114
+Verse number: 1 and maximum number of verses in a Surah
+
+##### Decision table:
+
+  Test Scenario                                 |    Decision
+
+User inputs a valid Surah and verse number      |       Pass
+
+User inputs an invalid Surah or verse number    |       Fail
+
+
+##### State diagram:
+
+Start -> Input Surah and verse number -> Display requested verse or error message -> End
+
+
+#### User Story 5: Bookmark verses 
+
+##### Equivalence class:
+Valid input: Surah and verse number (e.g. Surah Al-Baqarah, verse 255)
+Invalid input: Non-existing Surah or verse number
+
+##### Boundary values:
+Surah number: 1 and 114
+Verse number: 1 and maximum number of verses in a Surah
+
+##### Decision table:
+
+  Test Scenario                                 |    Decision
+
+User bookmarks a valid Surah and verse number           |       Pass
+
+User bookmarks an invalid Surah or verse number         |       Fail
+
+User attempts to bookmark the same verse multiple times |   Fail
+
+
+##### State diagram:
+
+Start -> Input Surah and verse number -> Bookmark verse -> End
 
 
 
+#### User Story 6: Read the Quran in native language.
 
+##### Equivalence class:
+Valid input: Language option (e.g. English, French, Spanish)
+Invalid input: Non-existing language option
 
+##### Boundary values:
+Language options: Available languages in the app
+
+##### Decision table:
+
+  Test Scenario                                 |    Decision
+
+User selects a valid language option            |       Pass
+
+User selects an invalid language option         |       Fail
+
+##### State diagram:
+
+Start -> Select Language -> Display Quran in selected language -> End
