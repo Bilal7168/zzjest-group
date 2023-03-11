@@ -1,0 +1,215 @@
+## User Story # 1: As a person who's learning the Quran, I want to be able to easily search some verses and chapters, so that I can quickly find the information I am looking for easily.
+
+### Gherkin Scenario:
+
+Scenario: Search for a specific chapter
+Given I am on the Quran.com homepage
+When I enter "Chapter 4" in the search bar
+And I click on the "Search" button
+Then I should see the results for Chapter 4
+
+Scenario: Search for a specific verse
+Given I am on the Quran.com homepage
+When I enter "Surah Al-Baqarah, verse 243" in the search bar
+And I click on the "Search" button
+Then I should see the results for Surah Al-Baqarah, verse 2443
+And the verse 243 of Surah Al-Baqarah should be displayed
+
+Scenario: Search for a keyword in the Quran
+Given I am on the Quran.com homepage
+When I enter "mercy" in the search bar
+And I click on the "Search" button
+Then I should see the search results for the keyword "mercy"
+And the verses containing the keyword "mercy" should be highlighted
+
+Scenario: Search for a translation of a verse
+Given I am on the Quran.com homepage
+When I enter "Surah Al-Baqarah, verse 286, English translation" in the search bar
+And I click on the "Search" button
+Then I should see the English translation of Surah Al-Baqarah, verse 286
+And the verse should be displayed in English
+
+Scenario: Search for a decipher of a verse
+Given I am on the Quran.com homepage
+When I enter "Surah Al-Baqarah, verse 210, decipher" in the search bar
+And I click on the "Search" button
+Then I should see the decipher of Surah Al-Baqarah, verse 210
+
+Scenario: Search for a verse by its number
+Given I am on the Quran.com homepage
+When I enter "2:243" in the search bar
+And I click on the "Search" button
+Then I should see Surah Al-Baqarah, verse 243
+And the verse should be displayed
+
+Scenario: Search for a verse using Arabic script
+Given I am on the Quran.com homepage
+When I enter "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ" in the search bar
+And I click on the "Search" button
+Then I should see Surah Al-Fatihah, verse 1
+And the verse should be displayed in Arabic script
+
+Scenario: Search for a verse in a specific language
+Given I am on the Quran.com homepage
+When I enter "Surah Al-Baqarah, verse 285, Urdu translation" in the search bar
+And I click on the "Search" button
+Then I should see the Urdu translation of Surah Al-Baqarah, verse 285
+And the verse should be displayed in Urdu
+
+Scenario: Search for a verse using a partial keyword
+Given I am on the Quran.com homepage
+When I enter "beau" in the search bar
+And I click on the "Search" button
+Then I should see the search results for the partial keyword "beau"
+And the verses containing the partial keyword "beau" should be highlighted
+
+Scenario: Search for chapters based on keywords
+Given I am on Quran.com
+And I want to search for chapters related to a specific topic
+When I enter the keywords related to the topic in the search bar
+And click on the search button
+Then the website should display a list of chapters that contain the searched keywords
+And allow me to click on any chapter to view its full text and audio recitation.
+
+## User Story # 2: As a person who's learning the Quran, I want to be able to easily search some verses and chapters, so that I can quickly find the information I am looking for easily.
+
+### Gherkin Scenario:
+
+Scenario: User can play audio recitation of a chapter selected
+Given the user is on the Quran.com 
+When the user selects a chapter from contents
+Then the audio recitation of the selected chapter should start playing
+
+Scenario: User can pause and resume audio recitation
+Given the user is on the Quran.com
+When the user is listening to an audio recitation of a chapter
+And the user clicks on the pause button
+Then the audio recitation should pause
+And when the user clicks on the play button, the audio recitation should resume from where it left off
+
+Scenario: User can stop audio recitation
+Given the user is on the Quran.com
+And the user clicks on the stop button
+Then the audio recitation should stop playing
+
+Scenario: User can adjust the volume of the audio recitation
+Given the user is on the Quran.com website
+When the user is listening to an audio recitation of a chapter
+And the user clicks on the volume button
+Then the volume of the audio recitation should change accordingly
+
+Scenario: User can select a specific reciter for the audio recitation
+Given the user is on the Quran.com website
+When the user selects a chapter from the table of contents
+And the user clicks on the reciter dropdown menu
+And the user selects a specific reciter
+Then the audio recitation of the selected chapter should start playing with the selected reciter's voice
+
+Scenario: User can navigate to a specific verse in the audio recitation
+Given the user is on the Quran.com website
+When the user is listening to an audio recitation of a chapter
+And the user clicks on the verse dropdown menu
+And the user selects a specific verse
+Then the audio recitation should start playing from the selected verse
+
+Scenario: User can adjust the playback speed of the audio recitation
+Given the user is on the Quran.com website
+When the user is listening to an audio recitation of a chapter
+And the user clicks on the speed button
+And the user adjusts the speed slider
+Then the playback speed of the audio recitation should change accordingly
+
+Scenario: User can see the slider of the audio recitation
+Given the user is on the website
+When the user is listening to an audio recitation of a chapter
+Then the user should be able to see the progress of the audio recitation just like any other media player
+
+Scenario: User can listen to audio recitation with translations
+Given the user is on the website
+When the user selects a chapter from the table of contents
+And the user clicks on the audio recitation button
+Then the audio recitation of the selected chapter should start playing with the selected translation
+
+Scenario: User can listen to audio recitation with transliteration
+Given the user is on the Quran.com website
+When the user selects a chapter from the table of contents
+And the user clicks on the audio recitation button
+Then the user should be able to listen to it with the transliteration
+
+## User Story # 3: As a person who's learning the Quran, I want to be able to easily search some verses and chapters, so that I can quickly find the information I am looking for easily.
+
+### Gherkin Scenario:
+
+Scenario: Search for audio recitation by specific reciter
+Given I am on the Quran.com
+And I click on the "Audio Recitation" option
+And I enter the name of the reciter 
+Then the audio recitation for the selected reciter should be displayed
+And I should be able to listen to it by clicking on the play button.
+
+Scenario: Play audio recitation of a specific chapter
+Given I am on the Quran.com 
+And I click on the "Audio Recitation" option
+And I select a specific chapter from the available options
+When I press the play button
+Then the audio recitation for the selected chapter should start playing
+
+Scenario: Adjust audio recitation speed
+Given I am listening to an audio recitation on Quran.com
+And the recitation is playing at normal speed
+When I click on the "Settings" option
+And I select "Speed" from the available options
+Then I should be able to adjust the audio recitation speed
+And the recitation should play at the selected speed.
+
+Scenario: Switch between different recitations of the selected chapter
+Given I am listening to an audio recitation of a specific chapter on Quran.com
+And there are multiple recitations available for the same chapter
+When I click on the "Recitations" option
+And select a different recitation from the available options
+Then the audio recitation for the selected recitation should start playing
+
+Scenario: Add audio recitation to favorites
+Given I am listening to an audio recitation on Quran.com
+And I want to save it for future listening
+When I click on the "Add to Favorites" button
+Then the audio recitation should be added to my favorites list
+And I should be able to access it easily from my account page.
+
+Scenario: Share audio recitation on social media
+Given I am listening to an audio recitation on Quran.com
+And I want to share it with my friends on social media
+When I click on the "Share" button
+Then the audio recitation should be shared on the selected platform
+And my friends should be able to listen to it from the shared link.
+
+Scenario: Filter audio recitations by language
+Given I am on the audio recitation page
+And I want to listen to audio recitations in a specific language
+When I click on the "Languages" option
+And select the language I want to filter by
+Then the audio recitations in the selected language should be displayed
+
+Scenario: Download audio recitation for offline listening
+Given I am listening to an audio recitation on Quran.com
+And I want to download it for offline listening
+When I click on the "Download" button
+Then the audio recitation should be downloaded to my device
+And I should be able to listen to it offline.
+
+Scenario: Listen to audio recitation in different audio formats
+Given I am on the recitation page
+And I want to listen to audio recitations in a specific audio format
+When I click on the "Audio Formats" option
+Then the audio recitations in the selected audio format should be displayed
+And I should be able to listen to them by clicking on the play button.
+
+Scenario: Add comment to audio recitation
+Given I am listening to an audio recitation
+And I want to add a comment to my selected audio recitation
+Then my comment should be added to the audio recitation for everyone to see
+
+
+
+
+
