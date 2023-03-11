@@ -1,0 +1,46 @@
+## 6 User Stories
+
+### Bilal Shahid
+
+As a person who's learning the Quran, I want to be able to easily search some verses and chapters, so that I can quickly find the information I am looking for easily.
+
+As a hafiz of the Quran, I want to be able to access audio recitations of each chapter, so that I can listen to them in my free time and make my learning better.
+
+As a scholar who is looking to expand his knowledge of the Quran, I want to be able to listen many different audio recitations, so that I can gain a more comprehensive understanding of Quran.
+
+#### Test Cases
+
+User story # 1 : Equivalence classes: Valid verse and chapter numbers (e.g. 2:255, 18), invalid verse and chapter numbers (e.g. 2:256, 120), non-numeric input (e.g. "Bismillah"), blank input.
+Boundary values: Minimum and maximum verse and chapter numbers (e.g. 1:1, 114:6), empty search field.
+Decision table:
+Input	              Action
+Valid	              Display the searched verse or chapter and its context
+Invalid	            Display an error message
+Non-numeric	        Display an error message
+Blank	              Display an error message
+
+User story # 2 : Test Case: Access audio recitation of a chapter
+Equivalence classes: Valid chapter numbers (e.g. 2), invalid chapter numbers (e.g. 120), non-numeric input (e.g. "Bismillah"), blank input.
+Boundary values: Minimum and maximum chapter numbers (e.g. 1, 114), empty search field.
+Decision table:
+Input	              Action
+Valid	              Play the audio recitation of the selected chapter
+Invalid	            Display an error message
+Non-numeric	        Display an error message
+Blank	              Display an error message
+
+User story # 3 : Test Case: Access multiple audio recitations of a chapter
+
+Equivalence classes: Valid chapter numbers (e.g. 2), invalid chapter numbers (e.g. 120), non-numeric input (e.g. "Bismillah"), blank input.
+Boundary values: Minimum and maximum chapter numbers (e.g. 1, 114), empty search field.
+Decision table:
+Input	              Action
+Valid	              Display a list of available audio recitations for the selected chapter
+Invalid	            Display an error message
+
+
+
+
+
+
+
